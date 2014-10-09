@@ -2,6 +2,8 @@ HitMe
 =====
 A Location Based Information Exchange
 
+View Business Model Canvas: https://docs.google.com/drawings/d/1AztKXoJiuu3lqGtF5Hxkpt8GmunLJhSMcD4bC1kbScw/edit?usp=sharing
+
 
 How It Works
 ============ 
