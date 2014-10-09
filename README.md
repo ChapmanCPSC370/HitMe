@@ -1,6 +1,13 @@
 HitMe
 =====
-A Location Based Information Exchange
+
+Current
+HitMe is an open source application. The MVP (Minimum Viable Product) will be a simple location exchange: the user will 
+be able create a simple profile. The user will also be able to see other users in the area. 
+
+Future
+An app that will allow users to message other users that are nearby. It will also allow venues/events/businesses to push
+notifications to users that are within its geoFence. 
 
 View Business Model Canvas: https://docs.google.com/drawings/d/1AztKXoJiuu3lqGtF5Hxkpt8GmunLJhSMcD4bC1kbScw/edit?usp=sharing
 
