@@ -181,7 +181,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
         }
      }
     private boolean servicesConnected() {
-        // Check that Google Play services is available
+        // Check that Google Play services are available
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
         // If Google Play services is available
         if (ConnectionResult.SUCCESS == resultCode) {

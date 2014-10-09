@@ -1,11 +1,11 @@
 HitMe
 =====
 
-Current
+Current:
 HitMe is an open source application. The MVP (Minimum Viable Product) will be a simple location exchange: the user will 
 be able create a simple profile. The user will also be able to see other users in the area. 
 
-Future
+Future: 
 An app that will allow users to message other users that are nearby. It will also allow venues/events/businesses to push
 notifications to users that are within its geoFence. 
 
