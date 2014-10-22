@@ -1,13 +1,22 @@
 ShyHi
 =====
+Mission Statement: 
+Our mission is to provide android users the easiest solution to open communication with other android users who are in close proximity. 
+
+
+Features
+========
+  
+
+Development Status
+==================
 
 Current:
-ShyHi is an open source application. The MVP (Minimum Viable Product) will be a simple location exchange: the user will 
-be able create a simple profile. The user will also be able to see other users in the area. 
+We are currently working on our Minimum Viable Product which is outlined in "Application Features". We are looking for more feature
+ideas to add in the future. Do not hesitate to contact us. 
 
 Future: 
-An app that will allow users to message other users that are nearby. It will also allow venues/events/businesses to push
-notifications to users that are within its geoFence. 
+After the MVP is completed we will be adding all new features and begin planning for the official application launch. 
 
 View Business Model Canvas: https://docs.google.com/drawings/d/1AztKXoJiuu3lqGtF5Hxkpt8GmunLJhSMcD4bC1kbScw/edit?usp=sharing
 
