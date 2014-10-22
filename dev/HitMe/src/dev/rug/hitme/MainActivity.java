@@ -1,4 +1,4 @@
-package dev.rug.hitme;
+ package dev.rug.hitme;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
