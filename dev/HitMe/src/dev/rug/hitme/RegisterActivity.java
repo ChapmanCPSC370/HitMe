@@ -28,11 +28,13 @@ public class RegisterActivity extends ActionBarActivity {
     ProgressDialog prgDialog;
     // Error Msg TextView Object
     TextView errorMsg;
-    // Name Edit View Object
-    EditText nameET;
+    // First Name Edit View Object
+    EditText fNameET;
+    // Last Name Edit View Object
+    EditText lNameET;
     // Email Edit View Object
     EditText emailET;
-    // Passwprd Edit View Object
+    // Password Edit View Object
     EditText pwdET;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,10 @@ public class RegisterActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_register);
 		 // Find Error Msg Text View control by ID
         errorMsg = (TextView)findViewById(R.id.register_error);
-        // Find Name Edit View control by ID
-        nameET = (EditText)findViewById(R.id.registerName);
+        // Find First Name Edit View control by ID
+        fNameET = (EditText)findViewById(R.id.registerFirstName);
+        // Find Last Name Edit View control by ID
+        lNameET = (EditText)findViewById(R.id.registerLastName);
         // Find Email Edit View control by ID
         emailET = (EditText)findViewById(R.id.registerEmail);
         // Find Password Edit View control by ID
@@ -80,7 +84,9 @@ public class RegisterActivity extends ActionBarActivity {
      */
     public void registerUser(View view){
         // Get NAme ET control value
-        String name = nameET.getText().toString();
+        String fName = fNameET.getText().toString();
+        // Get NAme ET control value
+        String lName = lNameET.getText().toString();
         // Get Email ET control value
         String email = emailET.getText().toString();
         // Get Password ET control value
@@ -88,11 +94,13 @@ public class RegisterActivity extends ActionBarActivity {
         // Instantiate Http Request Param Object
         RequestParams params = new RequestParams();
         // When Name Edit View, Email Edit View and Password Edit View have values other than Null
-        if(Utility.isNotNull(name) && Utility.isNotNull(email) && Utility.isNotNull(password)){
+        if(Utility.isNotNull(fName) && Utility.isNotNull(lName) && Utility.isNotNull(email) && Utility.isNotNull(password)){
             // When Email entered is Valid
             if(Utility.validate(email)){
                 // Put Http parameter name with value of Name Edit View control
-                params.put("name", name);
+                params.put("firstName", fName);
+             // Put Http parameter name with value of Name Edit View control
+                params.put("lastName", lName);
                 // Put Http parameter username with value of Email Edit View control
                 params.put("username", email);
                 // Put Http parameter password with value of Password Edit View control
@@ -122,7 +130,7 @@ public class RegisterActivity extends ActionBarActivity {
         prgDialog.show();
         // Make RESTful webservice call using AsyncHttpClient object
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("http://localhost/ShyHiWebServices/register/doregister",params ,new AsyncHttpResponseHandler() {
+        client.get("http://104.131.63.149/:8080/ShyHiWebServices/register/doregister",params ,new AsyncHttpResponseHandler() {
             // When the response returned by REST has Http response code '200'
              public void onSuccess(String response) {
                 // Hide Progress Dialog
@@ -195,7 +203,8 @@ public class RegisterActivity extends ActionBarActivity {
      * Set degault values for Edit View controls
      */
     public void setDefaultValues(){
-        nameET.setText("");
+        fNameET.setText("");
+        lNameET.setText("");
         emailET.setText("");
         pwdET.setText("");
     }

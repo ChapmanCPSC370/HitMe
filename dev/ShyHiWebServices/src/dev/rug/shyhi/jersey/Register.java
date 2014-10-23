@@ -18,14 +18,12 @@ public class Register {
     @Produces(MediaType.APPLICATION_JSON) 
     // Query parameters are parameters: http://localhost/<appln-folder-name>/register/doregister?name=pqrs&username=abc&password=xyz
     public String doLogin(@QueryParam("firstName") String fName,
-    		@QueryParam("firstName") String lName,
+    		@QueryParam("lastName") String lName,
     		@QueryParam("username") String uname, 
-    		@QueryParam("password") String pwd,
-    		@QueryParam("phone") int ph,
-    		@QueryParam("email") String em){
+    		@QueryParam("password") String pwd){
         String response = "";
         //System.out.println("Inside doLogin "+uname+"  "+pwd);
-        int retCode = registerUser(uname, pwd, fName, lName, ph, em);
+        int retCode = registerUser(uname, pwd, fName, lName);
         if(retCode == 0){
             response = Utitlity.constructJSON("register",true);
         }else if(retCode == 1){
@@ -34,17 +32,19 @@ public class Register {
             response = Utitlity.constructJSON("register",false, "Special Characters are not allowed in Username and Password");
         }else if(retCode == 3){
             response = Utitlity.constructJSON("register",false, "Error occured");
+        }else if(retCode == 4){
+            response = Utitlity.constructJSON("register",false, "Auth Error occured");
         }
         return response;
  
     }
  
-    private int registerUser(String uname, String pwd, String fName, String lName, int ph, String em){
+    private int registerUser(String uname, String pwd, String fName, String lName){
         System.out.println("Inside checkCredentials");
         int result = 3;
-        if(Utitlity.isNotNull(uname) && Utitlity.isNotNull(pwd) && Utitlity.isNotNull(fName) && Utitlity.isNotNull(lName)){
+        if(true){//Utitlity.isNotNull(uname) && Utitlity.isNotNull(pwd) && Utitlity.isNotNull(fName) && Utitlity.isNotNull(lName)){
             try {
-                if(DBConnection.insertUser(fName, lName, uname, pwd)){
+                if(DBConnection.insertUser(uname, pwd, fName, lName)){
                     System.out.println("RegisterUSer if");
                     result = 0;
                 }
@@ -67,7 +67,7 @@ public class Register {
             }
         }else{
             System.out.println("Inside checkCredentials else");
-            result = 3;
+            result = 4;
         }
  
         return result;

@@ -9,7 +9,8 @@
     <string name="title_activity_register">RegisterActivity</string>
 	<string name="register_title">Register</string>
     <string name="login_title">Login</string>
-    <string name="name">Name</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
     <string name="email">Email</string>
     <string name="pwd">Password</string>
 	<string name="btnRegister">Register</string>

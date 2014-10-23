@@ -116,7 +116,7 @@ public class LoginActivity extends ActionBarActivity {
          prgDialog.show();
          // Make RESTful webservice call using AsyncHttpClient object
          AsyncHttpClient client = new AsyncHttpClient();
-         client.get("http://localhost/ShyHiWebServices/login/dologin",params ,new AsyncHttpResponseHandler() {
+         client.get("http://104.131.63.149:8080/ShyHiWebServices/login/dologin",params ,new AsyncHttpResponseHandler() {
              // When the response returned by REST has Http response code '200'
              public void onSuccess(String response) {
                  // Hide Progress Dialog

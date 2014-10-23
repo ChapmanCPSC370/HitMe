@@ -44,7 +44,7 @@ public class DBConnection {
                 e.printStackTrace();
             }
             Statement stmt = dbConn.createStatement();
-            String query = "SELECT * FROM shys WHERE username = '" + uname
+            String query = "SELECT * FROM users WHERE username = '" + uname
                     + "' AND password=" + "'" + pwd + "'";
             //System.out.println(query);
             ResultSet rs = stmt.executeQuery(query);
@@ -77,7 +77,7 @@ public class DBConnection {
      * @throws SQLException
      * @throws Exception
      */
-    public static boolean insertUser(String fName, String lName, String uname, String pwd) throws SQLException, Exception {
+    public static boolean insertUser(String uname, String pwd, String fName, String lName) throws SQLException, Exception {
         boolean insertStatus = false;
         Connection dbConn = null;
         try {
@@ -88,8 +88,8 @@ public class DBConnection {
                 e.printStackTrace();
             }
             Statement stmt = dbConn.createStatement();
-            String query = "INSERT into shys(username, password, firstName, lastName) values('"+fName+ "','"+lName+ "',"+"'"
-                    + uname + "','" + pwd + "')";
+            String query = "INSERT into users(username, password, firstName, lastName) values('"+uname+ "','"+pwd+ "',"+"'"
+                    + fName + "','" + lName + "')";
             //System.out.println(query);
             int records = stmt.executeUpdate(query);
             //System.out.println(records);
