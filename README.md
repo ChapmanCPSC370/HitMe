@@ -24,19 +24,14 @@ View Business Model Canvas: https://docs.google.com/drawings/d/1AztKXoJiuu3lqGtF
 How It Works
 ============ 
 
-Create A Profile
-	- Full Name
-	- UserName
-	- Email Address
-	- Phone Number
-	- Profile Picture 
+Create A Profile: the user will be prompted to create a basic profile that includes: profile picture, full name, email address, and phone number. 
+	
 
-Nearby Feed
-	- List of people nearby 
-	- In order of proximity
-	- Person Profile
-		- Name of person
-		- Picture 
+Nearby Feed: after creating a profile, users will then be able to see a home page that primarily shows a feed. The feed will show other users in order of proximity to their current location - the user information will show their picture and full name. 
+
+
+Interaction: after seeing the feed, the user can decide to request that persons contact information or private message them. 
+	
 
 Application Infrastructure & Design
 ===================================
