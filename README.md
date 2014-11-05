@@ -40,6 +40,7 @@ ShyHi will utilize the built in Android Google Play Services for it's location h
 Contributors
 ============
 Jared Stephens
+
 Doug Woodward
 
 
