@@ -1,4 +1,8 @@
 ShyHi
+
+#This is a defunct repo, the project has been moved to https://github.com/ChapmanCPSC370/ShyHi 
+####We have decided to move in another direction with the project, so please come join us there!
+
 =====
 Mission Statement: 
 Our mission is to provide android users the easiest solution to open communication with other android users who are in close proximity. 
